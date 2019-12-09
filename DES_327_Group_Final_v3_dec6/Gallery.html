@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Little Cake Shoppe</title>
+    
+
+    <style>
+        
+        @font-face{
+    font-family: LietoMe;
+    src: url(./Fonts/LietoMe.ttf)
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font: LietoMe;
+}
+
+body {
+    font-family: sans-serif;
+}
+nav {
+    padding: 15px 10px;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+#logo{
+    width: 100px;
+}
+.button.secondary {
+    border-bottom: 1px #444 solid;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+}
+.toggle {
+    order: 1;
+}
+.item.button {
+    order: 2;
+}
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+}
+.item.active {
+    display: block;
+}
+
+/*nav end*/
+
+#mainimage{
+    width: 98%;
+}
+.splash{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    border-bottom: 1px #444 solid;
+    border-top: 1px #444 solid;
+    justify-content: center;
+    align-items: center;
+}
+.texts{
+    padding: 15px;
+    justify-content: center;
+    display: block;
+    width: 60%
+}
+.header{
+    padding-bottom: 10px;
+    font-size: 80%%;
+}
+#profile{
+    width: 98%;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width: 600px) {
+    .menu {
+        justify-content: center;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        order: 2;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px #006d6d solid;
+    }
+    .button.secondary a {
+        background: transparent;    
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+    .button.secondary a:hover {
+        color: #ddd;
+    } 
+    .splash{
+        flex-direction: row;
+    }
+    #profile{
+    width: 15%;
+    }
+    #mainimage{
+    width: 15%;
+    }
+}
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo {
+        order: 1;
+    }
+    .item {
+        order: 3;
+    }
+    .button {
+        order: 1;
+    }
+    .menu li {
+        padding: 15px 10px;
+    }
+    .menu li.button {
+        padding-right: 5;
+    }   
+}
+
+h1{
+    text-align: center; 
+}
+    
+    *{
+            box-sizing: border-box;
+        }
+        .flex_container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flex_item{
+            flex:25%;
+            padding: 0 4px;
+        }
+        
+        /*Responsive layout- makes a two column layout of one column layour instead of four items row*/
+        
+        @media screen and (max-width: 800px) {
+            .flex_item{
+                flex:50%;
+            }
+            
+        }
+        @media screen and (max-width: 600px) {
+                .flex_container{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+
+    </style>
+</head>
+<body>
+<nav>
+    <ul class="menu">
+        <li class="logo"><a href="./Home.html"><img id="logo" src="./Images/logo1.png"></a></li>
+        <li class="item"><a href="./Gallery.html">Gallery</a></li>
+        <li class="item"><a href="./About.html">About</a></li>
+        <li class="item button"><a href="./Order.html">Order</a></li>
+        <li class="item button secondary"><a href="./Menu.html">Menu</a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+
+<!-- Header -->
+<div class="header">
+  <h1>Gallery</h1>
+  <p></p>
+</div>
+
+<!-- Photo Grid -->
+<div class="flex_container"> 
+  <div class="flex_item">
+  <img src="Images/image1.jpg" style="width: 100%"> 
+  </div><!--/flex_item-->
+
+  <div class="flex_item">
+   <img src="Images/image6.jpg" style="width: 100%"> 
+  </div><!--/flex_item-->
+
+   <div class="flex_item">
+   <img src="Images/image22.JPG" style="width: 100%"> 
+  </div><!--/flex_item-->
+
+   <div class="flex_item">
+   <img src="Images/image4.jpg" style="width: 100%"> 
+  </div><!--/flex_item-->
+  
+  <div class="flex_item">
+   <img src="Images/image5.jpg" style="width: 100%"> 
+  </div>
+  
+  <div class="flex_item">
+   <img src="Images/image21.jpg" style="width: 100%"> 
+  </div>
+  
+  <div class="flex_item">
+   <img src="Images/image7.jpg" style="width: 100%"> 
+  </div>
+  
+  <div class="flex_item">
+   <img src="Images/image8.jpg" style="width: 100%"> 
+  </div>
+  
+  <div class="flex_item">
+   <img src="Images/image9.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image10.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image11.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image12.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image13.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image14.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image15.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image16.jpg" style="width: 100%"> 
+  </div>
+  
+  
+   <div class="flex_item">
+   <img src="Images/image18.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image19.JPG" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image2.jpg" style="width: 100%"> 
+  </div>
+  
+   <div class="flex_item">
+   <img src="Images/image3.jpg" style="width: 100%"> 
+  </div>
+  
+  <div class="flex_item">
+   <img src="Images/image17.jpg" style="width: 100%"> 
+  </div>
+  
+  <div class="flex_item">
+   <img src="Images/image20.jpg" style="width: 100%"> 
+  </div>
+  <!--/flex_item-->
+  
+</div><!--/flex_container-->
+
+</body>
+</html>

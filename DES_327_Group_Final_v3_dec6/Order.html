@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    
+    <style>
+       * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+nav {
+    padding: 15px 10px;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+#logo{
+    width: 100px;
+}
+.button.secondary {
+    border-bottom: 1px #444 solid;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+}
+.toggle {
+    order: 1;
+}
+.item.button {
+    order: 2;
+}
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+}
+.item.active {
+    display: block;
+}
+
+/*nav end*/
+
+#mainimage{
+    width: 98%;
+}
+.splash{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    border-bottom: 1px #444 solid;
+    border-top: 1px #444 solid;
+    justify-content: center;
+    align-items: center;
+}
+.texts{
+    padding: 15px;
+    justify-content: center;
+    display: block;
+    width: 80%
+}
+.header{
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+#profile{
+    width: 98%;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width: 600px) {
+    .menu {
+        justify-content: center;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        order: 2;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px #006d6d solid;
+    }
+    .button.secondary a {
+        background: transparent;    
+    }
+    .button a:hover {
+        text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+    .button.secondary a:hover {
+        color: #ddd;
+    } 
+    .splash{
+        flex-direction: row;
+    }
+    #profile{
+    width: 15%;
+    }
+    #mainimage{
+    width: 15%;
+    }
+}
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo {
+        order: 1;
+    }
+    .item {
+        order: 3;
+    }
+    .button {
+        order: 1;
+    }
+    .menu li {
+        padding: 15px 10px;
+    }
+    .menu li.button {
+        padding-right: 5;
+    }   
+}
+    </style>
+</head>
+<body>
+     <nav>
+    <ul class="menu">
+        <li class="logo"><a href="./Home.html"><img id="logo" src="./Images/logo1.png"></a></li>
+        <li class="item"><a href="./Gallery.html">Gallery</a></li>
+        <li class="item"><a href="./About.html">About</a></li>
+        <li class="item button"><a href="./Order.html">Order</a></li>
+        <li class="item button secondary"><a href="./Menu.html">Menu</a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+  <div class="header">
+  <h1>Order</h1>
+  <p>Fill out and submit the questionnaire below to place at order! </p>
+</div>
+
+
+</body>
+</html>
